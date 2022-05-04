@@ -1,0 +1,1 @@
+Tema aleasa pentru acest proiect este o aplicatie de tip catalog care va permite utilizatorului atat stocarea elevilor, profesorilor, materiilor si a notelor, cat si interogarea lor dupa diverse criterii.
