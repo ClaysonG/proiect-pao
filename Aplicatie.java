@@ -20,6 +20,7 @@ public class Aplicatie {
             }
         }
         Curs.incrementCursuri();
+        fh.write("cursuri", null, null, c, null, null, null);
         fh.write("audit", null, null, null, null, "inregistrareCurs", String.valueOf(new Timestamp(System.currentTimeMillis())));
     }
 
@@ -40,6 +41,7 @@ public class Aplicatie {
     public void addStudent(Student s) throws IOException {
         studenti.add(s);
         Student.incrementStudenti();
+        fh.write("studenti", s, null, null, null, null, null);
         fh.write("audit", null, null, null, null, "inregistrareStudent", String.valueOf(new Timestamp(System.currentTimeMillis())));
     }
 
@@ -60,6 +62,7 @@ public class Aplicatie {
     public void addProfesor(Profesor p) throws IOException {
         profesori.add(p);
         Profesor.incrementProfesori();
+        fh.write("profesori", null, p, null, null, null, null);
         fh.write("audit", null, null, null, null, "inregistrareProfesor", String.valueOf(new Timestamp(System.currentTimeMillis())));
     }
 

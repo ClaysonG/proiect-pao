@@ -33,11 +33,6 @@ public class Main {
             A.addStudent(s3);
             A.addStudent(s4);
             A.addStudent(s5);
-            fh.write("studenti", s1, null, null, null, null, null);
-            fh.write("studenti", s2, null, null, null, null, null);
-            fh.write("studenti", s3, null, null, null, null, null);
-            fh.write("studenti", s4, null, null, null, null, null);
-            fh.write("studenti", s5, null, null, null, null, null);
             for (Student student : Aplicatie.getStudenti()) {
                 System.out.println(student.toString());
             }
@@ -48,9 +43,6 @@ public class Main {
             A.addProfesor(p1);
             A.addProfesor(p2);
             A.addProfesor(p3);
-            fh.write("profesori", null, p1, null, null, null, null);
-            fh.write("profesori", null, p2, null, null, null, null);
-            fh.write("profesori", null, p3, null, null, null, null);
             for (Profesor profesor : Aplicatie.getProfesori()) {
                 System.out.println(profesor.toString());
             }
@@ -67,13 +59,6 @@ public class Main {
             A.addCurs(c4);
             A.addCurs(c5);
             A.addCurs(c6);
-            fh.write("cursuri", null, null, c1, null, null, null);
-            fh.write("cursuri", null, null, c2, null, null, null);
-            fh.write("cursuri", null, null, c3, null, null, null);
-            fh.write("cursuri", null, null, c4, null, null, null);
-            fh.write("cursuri", null, null, c5, null, null, null);
-            fh.write("cursuri", null, null, c6, null, null, null);
-
             for (Curs curs : Aplicatie.getCursuri()) {
                 System.out.println(curs.toString());
             }
