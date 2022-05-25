@@ -17,7 +17,7 @@ public class Aplicatie {
 
     private static String url = "jdbc:mysql://localhost:3306/catalog";
     private static String userName = "root";
-    private static String password = "Onekey768"; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    private static String password = "";
 
     private static Connection connection;
 
