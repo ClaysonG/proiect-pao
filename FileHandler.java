@@ -1,6 +1,7 @@
 import com.sun.istack.internal.Nullable;
 
 import java.io.*;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class FileHandler {
@@ -20,7 +21,7 @@ public class FileHandler {
         return instance;
     }
 
-    public void read(String fileName, Aplicatie aplicatie) throws IOException {
+    public void read(String fileName, Aplicatie aplicatie) throws IOException, SQLException {
         csvReader = new BufferedReader(new FileReader(fileName + ".csv"));
         String row;
         int rowCount = 0;

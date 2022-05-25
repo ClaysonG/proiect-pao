@@ -1,10 +1,62 @@
 public class Main {
     public static void main(String[] args) {
         try {
+            // Etapa 3
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
             Aplicatie A = new Aplicatie();
+
+            Student s1 = new Student.studentBuilder("1", "Popescu", "Stefan", 1).build();
+            Student s2 = new Student.studentBuilder("2", "Ionescu", "Ioan", 1).build();
+            Student s3 = new Student.studentBuilder("3", "Pavel", "Ioana", 2).build();
+            Student s4 = new Student.studentBuilder("4", "Stoica", "Raluca", 2).build();
+            Student s5 = new Student.studentBuilder("5", "Urziceanu", "Mircea", 4).build();
+            A.addStudent(s1);
+            A.addStudent(s2);
+            A.addStudent(s3);
+            A.addStudent(s4);
+            A.addStudent(s5);
+
+            Profesor p1 = new Profesor.profesorBuilder("6","Gherman", "Daniel").build();
+            Profesor p2 = new Profesor.profesorBuilder("7","Drilea", "Sergiu").build();
+            Profesor p3 = new Profesor.profesorBuilder("8","Diaconu", "Antonia").build();
+            A.addProfesor(p1);
+            A.addProfesor(p2);
+            A.addProfesor(p3);
+
+            Curs c1 = new Curs.cursBuilder("9","Algebra", p1.getId(), 1).build();
+            Curs c2 = new Curs.cursBuilder("10","Analiza", p1.getId(), 1).build();
+            Curs c3 = new Curs.cursBuilder("11","Programare", p2.getId(), 1).build();
+            Curs c4 = new Curs.cursBuilder("12","Electronica", p2.getId(), 2).build();
+            Curs c5 = new Curs.cursBuilder("13","Teoria Sistemelor", p3.getId(), 2).build();
+            Curs c6 = new Curs.cursBuilder("14","Tehnici Web", p3.getId(), 4).build();
+            A.addCurs(c1);
+            A.addCurs(c2);
+            A.addCurs(c3);
+            A.addCurs(c4);
+            A.addCurs(c5);
+            A.addCurs(c6);
+
+            Aplicatie.listStudenti();
+            Aplicatie.listProfesori();
+            Aplicatie.listCursuri();
+            Aplicatie.listStudentiDupaAn(2);
+
+            A.removeStudent("2");
+            A.removeProfesor("7");
+            A.removeCurs("10");
+
+            Aplicatie.listStudenti();
+            Aplicatie.listProfesori();
+            Aplicatie.listCursuri();
+
+            Aplicatie.closeConnection();
+
+            /* Etapa 1 + 2
+
             FileHandler fh = FileHandler.getInstance();
 
-            /*
             // Citire:
 
             fh.read("studenti", A);
@@ -17,7 +69,6 @@ public class Main {
             Aplicatie.listCursuri();
 
             Aplicatie.listStudentiDupaAn(2);
-            */
 
             // Scriere:
 
@@ -80,7 +131,7 @@ public class Main {
                     fh.write("cursuriStudenti", null, null, null, cursStudent, null, null);
              }
             }
-
+            */
         } catch (Exception e) {
             System.out.println(e);
         }
